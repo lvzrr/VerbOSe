@@ -76,7 +76,7 @@ def recogniser_threads(chunk_paths):
     threads = []
     out = []
     try:
-        print(f"{processing} Initializing transcription module...                        \r",end="",flush=True)
+        print(f"{processing} Initializing transcription module...\r",end="",flush=True)
         config = aai.TranscriptionConfig(language_code="es")
         transcriber = aai.Transcriber(config=config)
         cont=1
@@ -84,14 +84,14 @@ def recogniser_threads(chunk_paths):
         for i in range(0,len(chunk_paths),5):
             batch=chunk_paths[i:i+5]
             for chunk in batch:
-                print(f"{processing} Sending chunk: {chunk} [{cont}/{len(chunk_paths)}]                                                                      \r",end="",flush=True)
+                print(f"{processing} Sending chunk: {chunk} [{cont}/{len(chunk_paths)}]\r",end="",flush=True)
                 cont+=1
                 thread = threading.Thread(target=transcribe_chunk, args=(transcriber, chunk,out,cont))
                 threads.append(thread)
                 thread.start()
 
             for thread in threads:
-                print(f"{processing} Waiting for thread: {thread} [{cont2}/{len(chunk_paths)}]                                                               \r",end="",flush=True)
+                print(f"{processing} Waiting for thread: {thread} [{cont2}/{len(chunk_paths)}]\r",end="",flush=True)
                 cont2+=1
                 thread.join()
             threads.clear()
