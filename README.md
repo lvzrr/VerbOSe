@@ -23,7 +23,7 @@ The audio chain is provided by spotify's pedalboard module, that runs (when the 
 + A [limiter](https://www.masteringbox.com/es/learn/audio-limiter) to make sure there is no [clipping](https://es.wikipedia.org/wiki/Clipping_(audio)) in the audio (threshold at [-1bBFS](https://es.wikipedia.org/wiki/DBFS))
 
 This is the chain that feeds the signal to the louder:
-```bash
+```
 Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilter(cutoff_frequency_hz=16000,gain_db=+4),Compressor(threshold_db=-15,ratio=4,attack_ms=1,release_ms=10)])
 ```
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
