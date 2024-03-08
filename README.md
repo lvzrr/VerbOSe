@@ -106,5 +106,29 @@ def recogniser_threads(chunk_paths):
               thread.join()
             threads.clear()
 ```
-## Diagram/Concept map
+## Csv output format:
+```
+Longitud (ms),Texto
+9.022,b'En este ejercicio os dejo una trama de Cernet para que identifiqu\xc3\xa9is los campos.'
+
+17.996,"b'una trama Ethernet completa que yo he recibido por un interfaz Ethernet, los bits lo he puesto en hexadecimal, con lo cual cada dos d\xc3\xadgitos o letras es un byte y lo que tenemos que hacer aqu\xc3\xad es identificar los campos de la trama.'"
+
+3.914,"b'Entonces fijaros, ah\xc3\xad abajo os he puesto la trama de Cernet.'"
+
+63.937,"b'con la cabecera del subnivel MAC y el c\xc3\xb3digo de redundancia c\xc3\xadclica al final y en la cabecera del subnivel MAC ten\xc3\xadamos MAC destino, MAC origen y un tercer campo que pod\xc3\xada ser tipo o longitud seg\xc3\xban la trama fuera el formato DIX, formato CERNEC2 o el formato 802 entonces vendr\xc3\xa1 a continuaci\xc3\xb3n la cabecera LLC. Entonces los primeros 6 bytes son la direcci\xc3\xb3n MAC destino. En concreto Fijaros que es ese valor que coment\xc3\xa1bamos que estaba reservado para hacer referencia a todos los interfaces de la red de esta LAN. Lo que llamamos la direcci\xc3\xb3n MAC de Broadcast. Pero es un valor de direcci\xc3\xb3n MAC como otro cualquiera, solo que tiene ese significado especial. El siguiente campo es la direcci\xc3\xb3n MAC origen. Esos 6 bytes de ah\xc3\xad es la direcci\xc3\xb3n MAC origen. Es decir, la direcci\xc3\xb3n MAC del interfaz Ethernet que ha construido, que ha enviado esta trama Ethernet. Entonces, las direcciones MAC, si record\xc3\xa1is, ten\xc3\xadan dos partes. Los primeros tres bytes es lo que llamamos el OUI.'"
+
+34.124,"b'que es un identificador b\xc3\xa1sicamente del fabricante y los \xc3\xbaltimos tres bytes es como quien dice el n\xc3\xbamero de serie pr\xc3\xa1cticamente de la tarjeta, un identificador de la tarjeta fabricada por ese fabricante. Entonces pod\xc3\xa9is ir a tablas que tiene el iecubo y os dice a quien ha asignado los OUI y en concreto si busc\xc3\xa1is este 0077D est\xc3\xa1 asignado a Cisco Systems, \xc2\xbfvale? No lo s\xc3\xa9, conozca. Cisco Systems es un fabricante de equipos de comunicaciones originalmente de routers IP pero hoy en d\xc3\xada hay muchas m\xc3\xa1s cosas, \xc2\xbfvale? Muy conocido.'"
+
+31.237,"b'y muchos de los equipos que ten\xc3\xa9is en el laboratorio son de este tipo. Bien, el tercer campo es el Ethertype o la longitud. \xc2\xbfDe qu\xc3\xa9 depend\xc3\xada que fuera un campo de tipo o un campo de longitud? De si su valor era mayor que 1500 o menor o igual que 1500. Si es un campo longitud, me dice cu\xc3\xa1l es la longitud de los datos que vienen a continuaci\xc3\xb3n. Y dec\xc3\xadamos que la m\xc3\xa1xima cantidad de datos, lo que llamamos la MTU, Era de 1500 bytes, por lo cual nunca ten\xc3\xada sentido que la longitud fuera de m\xc3\xa1s de 1500.'"
+
+19.332,"b'No se emplea ning\xc3\xban Ethertype menor que 1.500 y as\xc3\xad tenemos hecha la compatibilidad. Si ah\xc3\xad pone m\xc3\xa1s de 1.500 es un Ethertype, si pone 1.500 o menos es una longitud y entonces estamos en formato 802 y a continuaci\xc3\xb3n deber\xc3\xada venir la cabecera LLC, \xc2\xbfvale? O digo el deber\xc3\xada y pongo la cabecera LLC porque va a todo ponerle Asterix.'"
+
+43.829,"b'Entonces, ese valor 0806, el primer byte es el m\xc3\xa1s significativo, el segundo byte es el menos significativo, esto es lo que se suele llamar el orden de la red, o Bigendian. Si lo pas\xc3\xa1is a decimales, 2054, y hay otra tabla de IANA, las organismos de estandarizaci\xc3\xb3n de registro de n\xc3\xbameros en internet, que pod\xc3\xa9is consultar y os dir\xc3\xa1 que 2054 es el valor reservado para decir que los datos que vienen son un paquete de un protocolo que se llama ARP o Address Resolution Protocol. Este es un protocolo muy com\xc3\xban en LAN, Ethernet en las cuales yo estoy empleando en los hosts el protocolo IPv4. Y como tal lo veremos en detalle en la asignatura de redes dom\xc3\xa9sticas.'"
+
+3.621,"b'Y bueno, los \xc3\xbaltimos cuatro bytes son el c\xc3\xb3digo de reputaci\xc3\xb3n.'"
+
+0.406,b'\xc2\xbfBien?'
+```
+## D[Uploading good_audio.csv…]()
+iagram/Concept map
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
