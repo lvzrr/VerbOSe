@@ -24,6 +24,8 @@ python verbose.py <file.mp4>
 ```
 ## Volume level checkpint
 Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point then decides if the paugmentation chain needs input gain and normalization.
+## DeepFilterNet
+This program runs an instance of [deepfilternet's](https://github.com/Rikorose/DeepFilterNet) noise supression module, it may be hard on your ram, it will denoise the audio before the compression and processing is applied.
 ## Audio chain
 The audio chain is provided by spotify's pedalboard module, that runs (when the algorythm decides that the input needs the full-chain processing):
 + Input gain
