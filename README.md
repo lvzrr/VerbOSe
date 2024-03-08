@@ -19,7 +19,7 @@ The audio chain is provided by spotify's pedalboard module, that runs (when the 
 + Compression (fast attack,slow release,ratio=4,threshold=-15)
 + High pass filter (at 550hz)
 + High pass shelf (at 16k Hz with a +4 gain)
-+ Loudness module to set the integrated LUFS at -14 (spotify's standard)
++ Loudness module to set the integrated [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html) at -14 [(spotify's standard)](https://support.spotify.com/es/artists/article/loudness-normalization/)
 + A limiter to make sure there is no clipping in the audio (threshold at -1bBFS)
 
 This is the chain that feeds the signal to the louder:
