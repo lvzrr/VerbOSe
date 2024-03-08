@@ -40,6 +40,8 @@ Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilte
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
 ## Audio segmentation
 You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters when the module detects there is a big enough silence.
+
+This chunks of audio are written to 
 ```bash
 [SNIP]
 def segment(output_path,working_dir):
