@@ -27,4 +27,6 @@ This is the chain that feeds the signal to the louder:
 Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilter(cutoff_frequency_hz=16000,gain_db=+4),Compressor(threshold_db=-15,ratio=4,attack_ms=1,release_ms=10)])
 ```
 You can change the settings in [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
+## Audio segmentation
+You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters when the module detects there is a silence big enough
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
