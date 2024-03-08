@@ -21,5 +21,8 @@ The audio chain is provided by spotify's pedalboard module, that runs (when the 
 + High pass shelf (at 16k Hz with a +4 gain)
 + Loudness module to set the integrated LUFS at -14 (spotify's standard)
 + A limiter to make sure there is no clipping in the audio (threshold at -1bBFS)
-
+This is the chain that feeds the signal to the louder:
+```bash
+Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilter(cutoff_frequency_hz=16000,gain_db=+4),Compressor(threshold_db=-15,ratio=4,attack_ms=1,release_ms=10)])
+```
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
