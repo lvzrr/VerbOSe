@@ -43,7 +43,7 @@ This is the chain that feeds the signal to the louder:
 Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilter(cutoff_frequency_hz=16000,gain_db=+4),Compressor(threshold_db=-15,ratio=4,attack_ms=1,release_ms=10)])
 ```
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
-### Waveform Before and After
+### Waveform & Samples Before and After
 Before            |  After
 :-------------------------:|:-------------------------:
 ![low_mic_unnormalised](https://github.com/lvzrr/VerbOSe/assets/161524890/a6852ebe-9b01-4fef-b16c-02485c8fa606) | ![low_noise_fixed](https://github.com/lvzrr/VerbOSe/assets/161524890/9347efe7-1d30-4325-997e-be6e00120861)
