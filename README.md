@@ -58,7 +58,7 @@ Before            |  After
 ## Audio segmentation
 You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters `(can be modified)` when the module detects there is a big enough silence.
 
-This chunks of audio are written to memory in the `./temp/chunks` folder (will be gnerated automatically at the start of the program, they will delete themselves)
+This chunks of audio are written to memory in the `./temp/chunks` folder (will be generated automatically at the start of the program, they will delete themselves)
 ```bash
 [SNIP]
 def segment(output_path,working_dir):
