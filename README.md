@@ -47,6 +47,8 @@ This is the chain that feeds the signal to the louder:
 Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilter(cutoff_frequency_hz=16000,gain_db=+4),Compressor(threshold_db=-15,ratio=4,attack_ms=1,release_ms=10)])
 ```
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
+
+After the louder the limiter would unclip the audio by limiting it to -1dB
 ### Waveform & Samples Before and After
 Before            |  After
 :-------------------------:|:-------------------------:
