@@ -27,7 +27,7 @@ For running this program you will need a `python3.10` or higher version of pytho
 python verbose.py <file.mp4>
 ```
 ## Volume level checkpoint
-Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point then decides if the paugmentation chain needs input gain and normalization.
+Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point. Then decides if the augmentation chain needs input gain and normalization.
 ## Length checkpoint
 The length of the audio file may be a crucioal factor at speeding the processing process, if the file is `longer than half an hour` it will be split in halves and fed independently to de deepfilternet module, then put pack together and continue the process as normal, however if the file is `longer than an hour`, it wont be processed by the deepfilternet module for performance reasons.
 ## DeepFilterNet
