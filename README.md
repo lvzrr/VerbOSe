@@ -59,7 +59,7 @@ def segment(output_path,working_dir):
 [SNIP]
 ```
 ## API usage
-This build uses Assemblyai's base spanish model for speech transcription. Every .wav chunk of audio that got written at the segmentation module is passed as an argument for the recogniser_threads() method as a list, the method will send 5 transcription petitions at a time and wait for the responses (in order to not get flagged as an attack, and because the free api key only supports 5 files at a time).
+This build uses Assemblyai's base spanish model for speech transcription. Every .wav chunk of audio that got written at the segmentation module is passed as an argument for the recogniser_threads() method as a list, the method will send 5 transcription petitions at a time and wait for the responses (in order to not get flagged as an attack, and because the free api key only supports processing of 5 files at a time).
 
 This method uses the default python module [threads](https://docs.python.org/3/library/threading.html), in order to speed up the process
 
