@@ -63,7 +63,7 @@ This build uses Assemblyai's base spanish model for speech transcription. Every 
 
 This method uses the default python module [threads](https://docs.python.org/3/library/threading.html), in order to speed up the process
 
-The threads used in this method return a duple to the array `out` consisting of: `[ [integer,transcriped test], ...]` this integer is used to index each entry and sort the array by order of what text was transcribed first.
+The threads used in this method return a duple to the array `out` consisting of: `[ [integer,"transcriped test"], ...]` this integer is used to index each entry and sort the array by order of what text was transcribed first.
 
 These are the methods involved in the interaction with the API:
 ```bash
