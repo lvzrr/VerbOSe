@@ -58,4 +58,6 @@ def segment(output_path,working_dir):
     print(f"{processing} Creating directory for chunks...\r",end="",flush=True)
 [SNIP]
 ```
+
+## Diagram/Concept map
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
