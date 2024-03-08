@@ -42,7 +42,7 @@ Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilte
 ```
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
 ### Waveform Before and After
-Solarized dark             |  Solarized Ocean
+Before            |  After
 :-------------------------:|:-------------------------:
 ![low_mic_unnormalised](https://github.com/lvzrr/VerbOSe/assets/161524890/a6852ebe-9b01-4fef-b16c-02485c8fa606) | ![low_noise_fixed](https://github.com/lvzrr/VerbOSe/assets/161524890/9347efe7-1d30-4325-997e-be6e00120861)
 
