@@ -1,5 +1,5 @@
 # VerbOSe
-Simple audio transcription module for python.
+Simple audio transcription module for python. (WIP)
 
 This program is designed to take a video ```(.mp4)``` and output 2 files:
 + A ```.csv``` file that contains a transcription for the audio and the length of each phrase
