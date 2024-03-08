@@ -17,7 +17,7 @@ Checks both the integrated loudness of the audio file imput and the maximum dBFS
 The audio chain is provided by spotify's pedalboard module, that runs (when the algorythm decides that the input needs the full-chain processing):
 + Input gain
 + Compression (fast attack,slow release,ratio=4,threshold=-15)
-+ [High pass filter](https://en.wikipedia.org/wiki/High-pass_filter#:~:text=A%20high-pass%20filter%20(HPF,depends%20on%20the%20filter%20design.) (at 550hz)
++ [High pass filter](https://en.wikipedia.org/wiki/High-pass_filter) (at 550hz)
 + High pass shelf (at 16k Hz with a +4 gain)
 + Loudness module to set the integrated [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html) at -14 [(spotify's standard)](https://support.spotify.com/es/artists/article/loudness-normalization/)
 + A [limiter](https://www.masteringbox.com/es/learn/audio-limiter) to make sure there is no [clipping](https://es.wikipedia.org/wiki/Clipping_(audio)) in the audio (threshold at [-1bBFS](https://es.wikipedia.org/wiki/DBFS))
