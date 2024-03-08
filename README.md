@@ -5,8 +5,8 @@ This program is designed to take a video ```(.mp4)``` and output 2 files:
 + A new video, with the audio processed and enhanced
 ## About
 Some of the most important modules that are used to run this program are:
-+ Spotify Pedalboard
-+ [Numpy](https://engineering.atspotify.com/2021/09/introducing-pedalboard-spotifys-audio-effects-library-for-python/)
++ [Spotify Pedalboard](https://engineering.atspotify.com/2021/09/introducing-pedalboard-spotifys-audio-effects-library-for-python/)
++ [Numpy](https://numpy.org/)
 + [Pyorch](https://pytorch.org/)
 + [Pyloudnorm](https://github.com/csteinmetz1/pyloudnorm)
 + [Pydub](https://github.com/jiaaro/pydub)
