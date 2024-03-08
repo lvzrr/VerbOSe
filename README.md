@@ -12,6 +12,10 @@ Some of the most important modules that are used to run this program are:
 + [Assembyai's api](https://www.assemblyai.com/) for audio transcription
 + [Ffmpeg](https://kkroening.github.io/ffmpeg-python/) for audio encoding
 ## Run
+First, you will need to get all the dependencies for python, you can get them through pip:
+```
+pip install -r requirements.txt
+```
 For running this program you will need a `python3` or higher version of python, here is the formatting of the arguments:
 ```
 python verbose.py <file.mp4>
