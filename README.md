@@ -48,7 +48,7 @@ Before            |  After
 
 Before            |  After
 :-------------------------:|:-------------------------:
-[![Sin título-1](https://github.com/lvzrr/VerbOSe/assets/161524890/fea0a904-bb14-40da-80fd-aee38f5f31df)](https://github.com/lvzrr/VerbOSe/assets/161524890/6220e718-ec36-4ecf-ac9f-37d004cba72c) | ![processed](https://github.com/lvzrr/VerbOSe/assets/161524890/5d0776cc-9060-4b72-89c1-61c9d77274ab)
+[![Sin título-1](https://github.com/lvzrr/VerbOSe/assets/161524890/fea0a904-bb14-40da-80fd-aee38f5f31df)](https://github.com/lvzrr/VerbOSe/assets/161524890/6220e718-ec36-4ecf-ac9f-37d004cba72c) | [![Sin título-1](https://github.com/lvzrr/VerbOSe/assets/161524890/fea0a904-bb14-40da-80fd-aee38f5f31df)](https://github.com/lvzrr/VerbOSe/assets/161524890/5d0776cc-9060-4b72-89c1-61c9d77274ab)
 ## Audio segmentation
 You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters `(can be modified)` when the module detects there is a big enough silence.
 
