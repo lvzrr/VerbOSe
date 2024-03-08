@@ -11,6 +11,7 @@ Some of the most important modules that are used to run this program are:
 + [Pydub](https://github.com/jiaaro/pydub) for audio segmentation and encoding
 + [Assembyai's api](https://www.assemblyai.com/) for audio transcription
 + [Ffmpeg](https://kkroening.github.io/ffmpeg-python/) for audio encoding
++ [Pandas]() for building the dataframe that will be exported as a .csv
 ## Run
 First, you will need to get all the dependencies for python, you can get them through pip (make sure you are inside a virtual environment):
 ```
