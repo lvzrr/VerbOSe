@@ -14,6 +14,10 @@ Some of the most important modules that are used to run this program are:
 + [Ffmpeg](https://kkroening.github.io/ffmpeg-python/) for audio encoding
 + [Pandas](https://pandas.pydata.org/) for building the dataframe that will be exported as a .csv
 ## Installation and Execution
+You can install this repository using git:
+```
+git clone https://github.com/lvzrr/VerbOSe
+```
 First, you will need to get all the dependencies for python, you can get them through pip (make sure you are inside a virtual environment):
 ```
 pip install -r requirements.txt
