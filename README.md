@@ -26,6 +26,7 @@ python verbose.py <file.mp4>
 Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point then decides if the paugmentation chain needs input gain and normalization.
 ## DeepFilterNet
 This program runs an instance of [deepfilternet's](https://github.com/Rikorose/DeepFilterNet) noise supression module, it may be hard on your ram, it will denoise the audio before the compression and processing is applied.
+[user-images.githubusercontent.com_16517898_225623209-a54fea75-ca00-404c-a394-c91d2d1146d2.svg.pdf](https://github.com/lvzrr/VerbOSe/files/14542259/user-images.githubusercontent.com_16517898_225623209-a54fea75-ca00-404c-a394-c91d2d1146d2.svg.pdf)
 ## Audio chain
 The audio chain is provided by spotify's pedalboard module, that runs (when the algorythm decides that the input needs the full-chain processing):
 + Input gain
@@ -97,7 +98,7 @@ def recogniser_threads(chunk_paths):
             for thread in threads:
                 print(f"{processing} Waiting for thread: {thread} [{cont2}/{len(chunk_paths)}]\r",end="",flush=True)
                 cont2+=1
-                thread.join()
+              thread.join()
             threads.clear()
 ```
 ## Diagram/Concept map
