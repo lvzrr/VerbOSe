@@ -11,5 +11,15 @@ Some of the most important modules that are used to run this program are:
 + [Pydub](https://github.com/jiaaro/pydub) for audio segmentation and encoding
 + [Assembyai's api](https://www.assemblyai.com/) for audio transcription
 + [Ffmpeg](https://kkroening.github.io/ffmpeg-python/) for audio encoding
+## Volume level checkpint
+Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point then decides if the paugmentation chain needs input gain and normalization.
+## Audio chain
+The audio chain is provided by spotify's pedalboard module, that runs (when the algorythm decides that the input needs the full-chain processing):
++ Input gain
++ Compression (fast attack,slow release,ratio=4,threshold=-15)
++ High pass filter (at 550hz)
++ High pass shelf (at 16k Hz with a +4 gain)
++ Loudness module to set the integrated LUFS at -14 (spotify's standard)
++ A limiter to make sure there is no clipping in the audio (threshold at -1bBFS)
 
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
