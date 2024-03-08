@@ -11,6 +11,11 @@ Some of the most important modules that are used to run this program are:
 + [Pydub](https://github.com/jiaaro/pydub) for audio segmentation and encoding
 + [Assembyai's api](https://www.assemblyai.com/) for audio transcription
 + [Ffmpeg](https://kkroening.github.io/ffmpeg-python/) for audio encoding
+## Run
+For running this program you will need a `python3` or higher version of python, here is the formatting of the arguments:
+```
+python verbose.py <file.mp4>
+```
 ## Volume level checkpint
 Checks both the integrated loudness of the audio file imput and the maximum dBFS value at any point then decides if the paugmentation chain needs input gain and normalization.
 ## Audio chain
