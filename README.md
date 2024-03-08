@@ -59,6 +59,42 @@ def segment(output_path,working_dir):
 [SNIP]
 ```
 ## API usage
-This build uses Assemblyai's base spanish model for speech transcription. Every .wav chunk of audio that got written at the segmentation module is passed as an argument for the recogniser_threads() method as a list, the method will send 5 transcription petitions at a time and wait for the responses (in order to not get flagged as an attack, and because the free api key only supports 5 files at a time). The threads used in this method return a duple to the array `out` consisting of: `[ [integer,transcriped test], ...]` this integer is used to index each entry and sort the array by order of what text was transcribed first.
+This build uses Assemblyai's base spanish model for speech transcription. Every .wav chunk of audio that got written at the segmentation module is passed as an argument for the recogniser_threads() method as a list, the method will send 5 transcription petitions at a time and wait for the responses (in order to not get flagged as an attack, and because the free api key only supports 5 files at a time).
+
+The threads used in this method return a duple to the array `out` consisting of: `[ [integer,transcriped test], ...]` this integer is used to index each entry and sort the array by order of what text was transcribed first.
+
+These are the methods involved in the interaction with the API:
+```bash
+def transcribe_chunk(transcriber, chunk,out,cont):
+    try:
+        result = transcriber.transcribe(chunk).text.encode("utf-8")
+        out.append([cont,result])
+    except Exception as e:
+        print(f"Error occurred while transcribing {chunk}: {e}")
+
+def recogniser_threads(chunk_paths):
+    threads = []
+    out = []
+    try:
+        print(f"{processing} Initializing transcription module...                        \r",end="",flush=True)
+        config = aai.TranscriptionConfig(language_code="es")
+        transcriber = aai.Transcriber(config=config)
+        cont=1
+        cont2=1
+        for i in range(0,len(chunk_paths),5):
+            batch=chunk_paths[i:i+5]
+            for chunk in batch:
+                print(f"{processing} Sending chunk: {chunk} [{cont}/{len(chunk_paths)}]                                                                      \r",end="",flush=True)
+                cont+=1
+                thread = threading.Thread(target=transcribe_chunk, args=(transcriber, chunk,out,cont))
+                threads.append(thread)
+                thread.start()
+
+            for thread in threads:
+                print(f"{processing} Waiting for thread: {thread} [{cont2}/{len(chunk_paths)}]                                                               \r",end="",flush=True)
+                cont2+=1
+                thread.join()
+            threads.clear()
+```
 ## Diagram/Concept map
 ![v2-Diagram (1)](https://github.com/lvzrr/VerbOSe/assets/161524890/a964d873-e9ff-43fe-8a8d-354445902a53)
