@@ -42,7 +42,10 @@ Chain=Pedalboard([Gain(9),HighpassFilter(cutoff_frequency_hz=550),HighShelfFilte
 ```
 You can change the settings [here](https://github.com/lvzrr/VerbOSe/blob/main/processing_chain.py)
 ### Waveform Before and After
-![low_mic_unnormalised](https://github.com/lvzrr/VerbOSe/assets/161524890/a6852ebe-9b01-4fef-b16c-02485c8fa606)![low_noise_fixed](https://github.com/lvzrr/VerbOSe/assets/161524890/9347efe7-1d30-4325-997e-be6e00120861)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![low_mic_unnormalised](https://github.com/lvzrr/VerbOSe/assets/161524890/a6852ebe-9b01-4fef-b16c-02485c8fa606) | ![low_noise_fixed](https://github.com/lvzrr/VerbOSe/assets/161524890/9347efe7-1d30-4325-997e-be6e00120861)
+
 ## Audio segmentation
 You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters `(can be modified)` when the module detects there is a big enough silence.
 
