@@ -13,7 +13,7 @@ from stt_methods import (audio_extract, check_quiet, createtables,
                          deletechunks, denoise, gen_id, limit, mergevideo,
                          recogniser_threads, segment)
 
-aai.settings.api_key ="633d8b7b72e744948733ee6c86566d9d"
+aai.settings.api_key ="YOUR_API_KEY_HERE"
 
 arguments=sys.argv
 arguments=arguments[1:]
