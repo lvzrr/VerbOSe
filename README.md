@@ -2,7 +2,7 @@
 Simple audio transcription module for python.
 
 This program is designed to take a video ```(.mp4)``` and output 2 files:
-+ A ```.csv``` file that contains a transcription for the video audio
++ A ```.csv``` file that contains a transcription for the audio and the length of each phrase
 + A new video, with the audio processed and enhanced
 ## About
 Some of the most important modules that are used to run this program are:
