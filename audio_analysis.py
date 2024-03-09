@@ -15,7 +15,7 @@ def analysis(input):
     out=[max_dBFS,loudness]
     return out
 def decision(analysis):
-    print(f"{processing} Making decitions based on analysis...  \r",end="",flush=True)
+    print(f"{processing} Making decisions based on analysis...  \r",end="",flush=True)
     out=["",""]
     if analysis[0]==0 or analysis[0]>=-5:
         out[0]="0"
