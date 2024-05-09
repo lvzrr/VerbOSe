@@ -59,7 +59,7 @@ Before            |  After
 You can find the audio segmentation function [here](https://github.com/lvzrr/VerbOSe/blob/main/stt_methods.py) at the segment() method, this splits the signal based on fixed parameters `(can be modified)` when the module detects there is a big enough silence.
 
 This chunks of audio are written to memory in the `./temp/chunks` folder (will be generated automatically at the start of the program, they will delete themselves)
-```bash
+```python
 [SNIP]
 def segment(output_path,working_dir):
     out1=[]
@@ -83,7 +83,7 @@ This method uses the default python module [threads](https://docs.python.org/3/l
 The threads used in this method return a duple to the array `out` consisting of: `[ [integer,"transcriped test"], ...]` this integer is used to index each entry and sort the array by order of what text was transcribed first.
 
 These are the methods involved in the interaction with the API:
-```bash
+```python 
 def transcribe_chunk(transcriber, chunk,out,cont):
     try:
         result = transcriber.transcribe(chunk).text.encode("utf-8")
